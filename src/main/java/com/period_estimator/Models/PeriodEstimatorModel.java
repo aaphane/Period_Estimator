@@ -1,7 +1,9 @@
 package com.period_estimator.Models;
 
 public class PeriodEstimatorModel {
-    private int userID;
+
+    //this should be a foreign key
+    private int userName;
     private int year;
     private int month;
     private int day;
@@ -9,11 +11,19 @@ public class PeriodEstimatorModel {
     private int cycleLength;
     //more variables to follow
 
+    //Alternatives variables
+//    private byte userName;
+//    private byte year;
+//    private byte month;
+//    private byte day;
+//    private short periodLength;
+//    private short cycleLength;
+
     public PeriodEstimatorModel() {
     }
 
-    public PeriodEstimatorModel(int userID, int year, int month, int day, int periodLength, int cycleLength) {
-        this.userID = userID;
+    public PeriodEstimatorModel(int userName, int year, int month, int day, int periodLength, int cycleLength) {
+        this.userName = userName;
         this.year = year;
         this.month = month;
         this.day = day;
@@ -21,12 +31,12 @@ public class PeriodEstimatorModel {
         this.cycleLength = cycleLength;
     }
 
-    public int getUserID() {
-        return userID;
+    public int getUserName() {
+        return userName;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setUserName(int userName) {
+        this.userName = userName;
     }
 
     public int getYear() {
