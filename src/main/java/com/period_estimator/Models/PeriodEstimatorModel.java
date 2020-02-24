@@ -1,6 +1,6 @@
 package com.period_estimator.Models;
 
-public class InputModel {
+public class PeriodEstimatorModel {
     private int userID;
     private int year;
     private int month;
@@ -8,10 +8,10 @@ public class InputModel {
     private int periodLength;
     private int cycleLength;
 
-    public InputModel() {
+    public PeriodEstimatorModel() {
     }
 
-    public InputModel(int userID, int year, int month, int day, int periodLength, int cycleLength) {
+    public PeriodEstimatorModel(int userID, int year, int month, int day, int periodLength, int cycleLength) {
         this.userID = userID;
         this.year = year;
         this.month = month;
