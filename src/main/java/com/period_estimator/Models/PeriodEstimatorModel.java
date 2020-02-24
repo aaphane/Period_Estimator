@@ -7,6 +7,7 @@ public class PeriodEstimatorModel {
     private int day;
     private int periodLength;
     private int cycleLength;
+    //more variables to follow
 
     public PeriodEstimatorModel() {
     }
