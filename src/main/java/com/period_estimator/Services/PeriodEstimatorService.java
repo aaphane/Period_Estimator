@@ -20,7 +20,16 @@ public class PeriodEstimatorService {
 
     //To return estimated time
     public PeriodEstimatorModel getUserData(int userID) {
+        //query database to get userData
         System.out.println("Test Controller Method(getUserData)... " + userID);
         return estimate;
+    }
+
+    public void updateUserData(PeriodEstimatorModel userData) {
+        //query database to update userData
+    }
+
+    public void deleteUserData(int userID) {
+        //query database to delete userData
     }
 }
