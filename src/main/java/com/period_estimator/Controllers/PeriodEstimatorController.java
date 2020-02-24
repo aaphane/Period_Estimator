@@ -1,4 +1,28 @@
 package com.period_estimator.Controllers;
 
+import com.period_estimator.Models.PeriodEstimatorModel;
+import com.period_estimator.Services.PeriodEstimatorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class PeriodEstimatorController {
+
+    @Autowired
+    private PeriodEstimatorService periodEstimatorService;
+
+    @RequestMapping(method = RequestMethod.POST, value = "/periodestimator")
+    public void addUserData(PeriodEstimatorModel userData) {
+        System.out.println("Test Controller Method(addUserData)...");
+        periodEstimatorService.addUserData(userData);
+    }
+
+    @RequestMapping("/periodestimator/{userID}")
+    public PeriodEstimatorModel getUserData(@PathVariable int userID) {
+        System.out.println("Test Controller Method(getUserData)...");
+        return periodEstimatorService.getUserData(userID);
+    }
 }
