@@ -1,4 +1,4 @@
-package com.period_estimator.application;
+package com.period_estimator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
