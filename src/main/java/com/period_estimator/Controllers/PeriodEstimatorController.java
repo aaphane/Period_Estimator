@@ -25,4 +25,14 @@ public class PeriodEstimatorController {
         System.out.println("Test Controller Method(getUserData)...");
         return periodEstimatorService.getUserData(userID);
     }
+
+    public void updateUserData(PeriodEstimatorModel userData) {
+        //query database to update userData
+//        periodEstimatorService.updateUserData();
+    }
+
+    public void deleteUserData(int userID) {
+        //query database to delete userData
+//        periodEstimatorService.deleteUserData();
+    }
 }
