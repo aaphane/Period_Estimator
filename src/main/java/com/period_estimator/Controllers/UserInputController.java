@@ -17,11 +17,11 @@ public class UserInputController {
         userInputService.addUserData(userData);
     }
 
-    @RequestMapping("/periodestimator/{userID}")
-    public UserInputModel getUserData(@PathVariable int userID) {
-        System.out.println("Test Controller Method(getUserData)...");
-        return userInputService.getUserData(userID);
-    }
+//    @RequestMapping("/periodestimator/{userID}")
+//    public UserInputModel getUserData(@PathVariable int userID) {
+//        System.out.println("Test Controller Method(getUserData)...");
+//        return userInputService.getUserData(userID);
+//    }
 
     public void updateUserData(UserInputModel userData) {
         //query database to update userData
