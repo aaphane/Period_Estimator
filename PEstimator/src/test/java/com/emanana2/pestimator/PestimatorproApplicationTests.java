@@ -1,13 +1,13 @@
-package com.periodestimator.PEstimator;
+package com.emanana2.pestimator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PEstimatorApplicationTests {
+class PestimatorproApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
