@@ -6,16 +6,15 @@ import javax.persistence.Id;
 import javax.persistence.GenerationType;
 
 @Entity
-public class UserModel {
-
+public class Users {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int Id;
     private String username;
     private String email;
     private String password;
 
-    public UserModel() {
+    public Users() {
     }
 
     public int getId() {
