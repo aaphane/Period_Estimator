@@ -1,0 +1,39 @@
+
+* {
+  box-sizing: border-box;
+}
+  .Absolute-Center.is-Responsive {
+    width: 50%; 
+    height: 50%;
+    min-width: 200px;
+    max-width: 1200px; 
+    /* padding: 100px; */
+    margin: 150px;
+  }
+
+.Nameform
+{
+  display: none;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+
+h3
+{
+  font: 400 70px/1.5 'Pacifico', Helvetica, sans-serif;color: #2b2b2b; text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+}
+
+h2
+{
+  font: 200 50px/1.5 'Pacifico', Helvetica, sans-serif;color: #2b2b2b; text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+}
+p{
+ font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
