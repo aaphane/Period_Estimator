@@ -9,16 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @Autowired
-    public DBConnect dbConnect;
-
+    public DBConnect connect;
 
     @GetMapping("/") //index endpoint.
     public String home() {
-
-        DBConnect conn = new DBConnect();
-
-        conn.query(conn.getConnection(), "SELECT * FROM test.user_info ");
-
+       connect.excuteQuery("INSERT INTO `user_info` (`name`, `user_id`) VALUES ('BOSS1', '6198')");
         return("home");
     }
 

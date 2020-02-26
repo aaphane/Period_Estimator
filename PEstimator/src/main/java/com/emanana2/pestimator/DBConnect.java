@@ -11,38 +11,45 @@ import java.util.Properties;
 @Service
 public class DBConnect {
 
-    public  DBConnect(){
 
-    }
+    Connection conn = null;
 
-    // get connection => return a connection.
-    public Connection getConnection(){
+    //prepared statement (query) function here
+    private void query(Connection connection, String sql){
 
-        String url = "jdbc:mysql://localhost:3306/test";
-        Properties info = new Properties();
-        info.put("user", "root");
-        info.put("password", "@Siyamthanda2017");
-
-        try
-        {
-            try (Connection conn = DriverManager.getConnection(url, info)) {
-                return conn;
-            }
-        }catch(Exception e){
-            throw new RuntimeException(e);
-        }finally {
-            //close connection
-           // conn.close();
+        try {
+            //Connection connection = getConnection();
+            Statement com = connection.createStatement();
+            System.out.println("query executed");
+            com.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
-    //prepared statement (query) function here
-    public void query(Connection connection, String queryString){
-        try {
-            Statement statement = connection.createStatement();
-            statement.execute(queryString);
-        } catch (SQLException e) {
-            e.printStackTrace();
+    // get connection => return a connection.
+    public Connection excuteQuery(String sql){
+
+
+        try
+        {
+            Properties info = new Properties();
+            String url;
+            url = "jdbc:mysql://localhost:3306/test";
+            info.put("user", "root");
+            info.put("password", "@Siyamthanda2017");
+            conn = DriverManager.getConnection(url, info);
+            query(conn, sql);
+            return conn;
+
+        }catch(Exception e){
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
