@@ -3,10 +3,7 @@ package com.periodestimator.PEstimator;
 
 import org.springframework.stereotype.Service;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 @Service
@@ -15,7 +12,7 @@ public class DBConnect {
 
     Connection conn = null;
 
-    //prepared statement (query) function here
+    // CRD queries
     private void query(Connection connection, String sql){
 
         try {
@@ -52,6 +49,5 @@ public class DBConnect {
             }
         }
     }
-
 
 }
